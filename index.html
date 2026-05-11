@@ -259,5 +259,10 @@
             document.getElementById('editor').style.display = 'none';
         }
     </script>
+    const pass = prompt("パスワードを入力してください");
+if (pass !== "1234") { // 好きな数字に変更
+    document.body.innerHTML = "アクセス権限がありません";
+    window.stop();
+}
 </body>
 </html>
