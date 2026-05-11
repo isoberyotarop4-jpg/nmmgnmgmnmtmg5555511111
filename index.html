@@ -218,11 +218,23 @@
     </div>
 
     <script>
-        const key = prompt("合言葉を入力してください");
-if (key !== "1234") { 
-    document.body.innerHTML = "<div style='background:#1a1a1a;color:white;text-align:center;padding-top:100px;height:100vh;'><h1>アクセス権限がありません</h1></div>";
-    window.stop();
-}
+        // 一旦画面を消す
+document.body.style.display = "none";
+
+// 0.1秒だけ待ってから入力欄を出す（iPhoneのバグ回避用）
+setTimeout(() => {
+    const key = "1234";
+    const input = prompt("合言葉を入力してください");
+
+    if (input === key) {
+        // 合言葉が正しければ画面を表示
+        document.body.style.display = "block";
+    } else {
+        // 間違っていたらエラーメッセージ
+        document.body.style.display = "block";
+        document.body.innerHTML = "<div style='background:#1a1a1a;color:white;text-align:center;padding-top:100px;height:100vh;font-family:sans-serif;'><h1>アクセス権限がありません</h1><p>再読み込みして正しい合言葉を入力してください。</p></div>";
+    }
+}, 100);
         let uploadedImage = "https://via.placeholder.com/150x200";
 
         function openID() { 
