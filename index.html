@@ -218,26 +218,7 @@
     </div>
 
     <script>
-       // 画面を隠す
-document.body.style.display = "none";
-
-// アプリ起動時に直接入力フォームを作る
-window.onload = function() {
-    const key = "0820";
-    const input = prompt("合言葉を入力してください");
-
-    if (input === key) {
-        document.body.style.display = "block";
-    } else {
-        document.body.style.display = "block";
-        document.body.innerHTML = `
-            <div style="background:#1a1a1a;color:white;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:sans-serif;">
-                <h1>アクセス制限中</h1>
-                <button onclick="location.reload()" style="padding:10px 20px;background:white;border:none;border-radius:5px;font-weight:bold;">合言葉を入力する</button>
-            </div>
-        `;
-    }
-};
+      
         let uploadedImage = "https://via.placeholder.com/150x200";
 
         function openID() { 
