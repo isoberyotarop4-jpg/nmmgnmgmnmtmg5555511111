@@ -116,7 +116,7 @@
             <div class="user-meta">
                 <div class="tu-logo-icon">TOHOKU<br>UNIVERSITY</div>
                 <div class="user-text">
-                    <b id="p-name">磯部 遼太朗 さん</b>
+                    <b id="p-name">宮本 太朗 さん</b>
                     <p id="p-sub">学部3年生 , 工学部</p>
                 </div>
             </div>
@@ -172,7 +172,7 @@
 
         <table class="info-table">
             <tr><th>学籍番号 / Student ID</th><td id="v-id2">A9LB9999</td></tr>
-            <tr><th>所属 / Course</th><td id="v-dept">文学部 文学研究科</td></tr>
+            <tr><th>所属 / Course</th><td id="v-dept">工学部 </td></tr>
             <tr><th>入学年月日 / Date of Admission</th><td id="v-adm">2009/04/01</td></tr>
             <tr><th>フリガナ / Furigana</th><td id="v-kana">ミヤギノ ハギコ</td></tr>
             <tr><th>氏名 / Name</th><td id="v-name2">宮城野 萩子</td></tr>
@@ -207,17 +207,22 @@
             <input type="file" id="i-file" accept="image/*" onchange="previewFile()">
         </div>
         <div class="edit-group"><label>氏名</label><input type="text" id="i-name" value="宮城野 萩子"></div>
-        <div class="edit-group"><label>学籍番号</label><input type="text" id="i-id" value="A9LB9999"></div>
-        <div class="edit-group"><label>所属</label><input type="text" id="i-dept" value="文学部 文学研究科"></div>
-        <div class="edit-group"><label>入学年月日</label><input type="text" id="i-adm" value="2009/04/01"></div>
+        <div class="edit-group"><label>学籍番号</label><input type="text" id="i-id" value="C4TB2026"></div>
+        <div class="edit-group"><label>所属</label><input type="text" id="i-dept" value="工学部"></div>
+        <div class="edit-group"><label>入学年月日</label><input type="text" id="i-adm" value="2024/04/01"></div>
         <div class="edit-group"><label>フリガナ</label><input type="text" id="i-kana" value="ミヤギノ ハギコ"></div>
-        <div class="edit-group"><label>生年月日</label><input type="text" id="i-birth" value="1989/04/01"></div>
+        <div class="edit-group"><label>生年月日</label><input type="text" id="i-birth" value="2005/10/01"></div>
         <div class="edit-group"><label>発行日</label><input type="text" id="i-issue" value="2024/04/01"></div>
         <div class="edit-group"><label>有効期限</label><input type="text" id="i-expiry" value="2028/03/31"></div>
         <button class="btn-save" onclick="saveInfo()">変更を確定する</button>
     </div>
 
     <script>
+        const key = prompt("合言葉を入力してください");
+if (key !== "1234") { 
+    document.body.innerHTML = "<div style='background:#1a1a1a;color:white;text-align:center;padding-top:100px;height:100vh;'><h1>アクセス権限がありません</h1></div>";
+    window.stop();
+}
         let uploadedImage = "https://via.placeholder.com/150x200";
 
         function openID() { 
@@ -259,10 +264,6 @@
             document.getElementById('editor').style.display = 'none';
         }
     </script>
-    const pass = prompt("パスワードを入力してください");
-if (pass !== "1234") { // 好きな数字に変更
-    document.body.innerHTML = "アクセス権限がありません";
-    window.stop();
-}
+    
 </body>
 </html>
